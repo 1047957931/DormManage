@@ -6,12 +6,10 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".ui.SignUpActivity">
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
         <!--android:src="@mipmap/school" -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,26 +19,32 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_name"
         android:text="姓名：" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_number"
         android:text="学号：" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_major"
         android:text="院系：" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_class"
         android:text="班级：" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/ev_password"
         android:text="密码：" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/et_password"
         android:text="确认密码：" />
     <Button
         android:layout_width="wrap_content"
