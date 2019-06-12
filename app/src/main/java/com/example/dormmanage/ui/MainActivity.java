@@ -1,4 +1,4 @@
-package com.example.dormmanage.ui;
+package com.example.dormmanage.ui   ;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
