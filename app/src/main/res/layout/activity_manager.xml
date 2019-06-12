@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity"
+    tools:context=".ui.ManagerActivity"
     android:orientation="vertical">
     <LinearLayout
-        android:id="@+id/btn_fragment"
+        android:id="@+id/btn_fragment2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -17,16 +17,16 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:id="@+id/btn_group">
+        android:id="@+id/btn_group2">
         <RadioButton
-            android:id="@+id/btn_function"
+            android:id="@+id/btn_function2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="功能"
             android:checked="true"
             android:layout_weight="1"/>
         <RadioButton
-            android:id="@+id/btn_set"
+            android:id="@+id/btn_set2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="设置"
