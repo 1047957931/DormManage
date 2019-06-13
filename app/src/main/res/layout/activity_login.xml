@@ -29,24 +29,17 @@
         android:hint="请输入密码" />
 
     <Button
-        android:id="@+id/btn_student_login"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="学生登录"
-        android:textSize="20sp" />
-    <Button
-        android:id="@+id/btn_manager_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="管理员登录"
+        android:text="登录"
         android:textSize="20sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_Registered"
         android:text="注册"
         android:textSize="20sp" />
 
