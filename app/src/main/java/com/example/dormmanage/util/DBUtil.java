@@ -6,12 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBUtil extends SQLiteOpenHelper {
 
-    private final String TBL_ROOM = "CREATE TABLE IF NOT EXISTS t_sign\n" +
+    private final String TBL_ROOM = "CREATE TABLE IF NOT EXISTS t_sign" +
             "(" +
             " id INT  PRIMARY KEY AUTOINCREMENT," +
             " number int(10) NOT NULL ," +
-            " passward char(8) NOT NULL ," +
-            " PRIMARY KEY(id))";
+            " passward char(8) NOT NULL )";
 
     public DBUtil( Context context,  int version) {
         super(context, "demo.db",null, version);
