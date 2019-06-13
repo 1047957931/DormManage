@@ -3,26 +3,26 @@ package com.example.dormmanage.model;
 import java.io.Serializable;
 
 public class Sign implements Serializable {
-    private int number;
-    private char password;
+    private String number;
+    private String password;
 
     public Sign(){
 
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
-    public char getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(char password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

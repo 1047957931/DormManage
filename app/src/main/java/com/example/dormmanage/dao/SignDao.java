@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface SignDao {
     //查询所有楼层
-    List<Number> selectAllUsers();
+    List<Sign> selectAllUsers();
     //条件查询
-    Number select(String Number);
-    List<Number>selectByCost(int cost);
+    Sign select(String number);
+
     //增删改一个楼层
-    void insert(Number number);
-    void update(Number number);
+    void insert(Sign sign);
+    void update(Sign sign);
     void delete(String number );
 }

@@ -16,13 +16,13 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/btn_userName"
+        android:id="@+id/sign_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入用户名" />
 
     <EditText
-        android:id="@+id/btn_password"
+        android:id="@+id/sign_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberPassword"
