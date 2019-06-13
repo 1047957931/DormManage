@@ -6,12 +6,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBUtil extends SQLiteOpenHelper {
 
-    private final String TBL_ROOM = "CREATE TABLE IF NOT EXISTS t_floor" +
+    private final String TBL_ROOM = "CREATE TABLE IF NOT EXISTS t_sign\n" +
             "(" +
-            "    id INT  PRIMARY KEY AUTOINCREMENT," +
-            "    manager char(100) NOT NULL ," +
-            "    floor int(1) NOT NULL ," +
-            "    tel int(11) NOT NULL )";
+            " id INT  PRIMARY KEY AUTOINCREMENT," +
+            " number int(10) NOT NULL ," +
+            " passward char(8) NOT NULL ," +
+            " PRIMARY KEY(id))";
 
     public DBUtil( Context context,  int version) {
         super(context, "demo.db",null, version);
@@ -26,7 +26,7 @@ public class DBUtil extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists t_floor");
+        db.execSQL("drop table if exists t_sign");
 
     }
 }
