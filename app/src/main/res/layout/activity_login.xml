@@ -7,16 +7,24 @@
     tools:context=".ui.LoginActivity">
 
 
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"/>
     <TextView
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="宿舍系统登录界面"
-        android:textColor="#ff0000"
+        android:text="宿舍管理"
         android:textSize="24sp" />
 
     <EditText
         android:id="@+id/sign_number"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入用户名" />

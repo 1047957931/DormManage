@@ -72,6 +72,15 @@ public class SignDaoImpl implements SignDao{
 
     @Override
     public void insert(Sign sign) {
+        //1.获取db对象
+        db=helper.getWritableDatabase();
+        String sql="insert into t_sign values(?,?)";
+        //2.执行sql
+        db.execSQL(sql,new Object[]{
+                sign.getNumber(),
+                sign.getPassword()
+        });
+
 
     }
 

@@ -45,16 +45,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()){
             case R.id.btn_student_login:
                 login();
-
                 break;
             case R.id.btn_signup:
                Intent intent=new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_manager_login:
-                intent=new Intent(LoginActivity.this,ManagerActivity.class);
-                startActivity(intent);
+               login1();
                 break;
+        }
+    }
+
+    private void login1() {
+        //处理按钮的点击事件
+        //获取用户名和密码的值
+        String usermame = signnumber.getText().toString().trim();
+        String password = signpassword.getText().toString();
+        //比较用户名的密码是否正确，然后给出提示
+        if (usermame.equals("CYS") && password.equals("123456")) {
+            Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(LoginActivity.this,ManagerActivity.class);//跳转页面
+            intent.putExtra("username",usermame);//将要传递的值附加到intent对象
+            startActivity(intent);//启动
+        } else {
+            Toast.makeText(LoginActivity.this, "用户名或密码不正确", Toast.LENGTH_LONG).show();
+
         }
     }
 
@@ -62,14 +77,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void login()  {
         // 1. 获取用户名密码
         Sign sign = new Sign();
-
         sign.setNumber(signnumber.getText().toString());
         sign.setPassword(signpassword.getText().toString());
-
-
         // 2. 判断
         boolean result = service.login(sign);
-
         // 3. 跳转
         if(result) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
