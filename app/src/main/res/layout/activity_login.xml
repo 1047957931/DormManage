@@ -14,7 +14,7 @@
         android:src="@mipmap/ic_launcher"
         android:layout_gravity="center"/>
     <TextView
-        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:textColor="#000"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -23,18 +23,21 @@
         android:textSize="24sp" />
 
     <EditText
+        android:background="@drawable/bg_1"
         android:id="@+id/sign_number"
         android:textColor="#000"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入用户名" />
+        android:layout_height="50dp"
+        android:hint="请输入用户名:" />
 
     <EditText
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_1"
         android:id="@+id/sign_password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:inputType="numberPassword"
-        android:hint="请输入密码" />
+        android:hint="请输入密码:" />
 
     <Button
         android:id="@+id/btn_student_login"
@@ -51,6 +54,7 @@
         android:text="管理登录"
         android:textSize="20sp" />
     <Button
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

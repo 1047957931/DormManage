@@ -8,11 +8,10 @@ import com.example.dormmanage.model.Sign;
 
 public class SignService {
     private SignDao dao;
-
     public SignService(Context context) {
         this.dao = new SignDaoImpl(context);
     }
-
+//1.完成登录功能
     public boolean login(Sign sign) {
         Sign s = dao.select(sign.getNumber());
         if(s != null && s.getPassword().equals(sign.getPassword())) {
@@ -20,6 +19,14 @@ public class SignService {
         }
         return  false;
     }
+//2.完成注册功能
 
-
+    public boolean register(Sign sign) {
+        int count = 0;
+        Sign s=dao.select(sign.getNumber());
+        if (s==null){
+            count=dao.insert(sign);
+        }
+        return count>0;
+    }
 }

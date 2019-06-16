@@ -8,8 +8,9 @@ public interface SignDao {
     //条件查询
     Sign select(String number);
 
-    //增删改一个楼层
-    void insert(Sign sign);
+    //注册
+    int insert(Sign sign);
+    //
     void update(Sign sign);
     void delete(String number );
 }

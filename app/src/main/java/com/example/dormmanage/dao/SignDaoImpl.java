@@ -28,8 +28,8 @@ public class SignDaoImpl implements SignDao{
     public List<Sign> selectAllUsers() {
 //        List<Room> rooms = null;
 //        //1、获取SQLiteDateBase对象
-//        db = helper.getReadableDatabase();
-//        //2、查询
+//        db = helper.g
+//        //2、查询etReadableDatabase();
 //        String sql = "select * from t_room";
 //        Cursor cursor = db.rawQuery( sql,null );//跟Result类似
 //        //3、处理结果
@@ -71,16 +71,22 @@ public class SignDaoImpl implements SignDao{
     }
 
     @Override
-    public void insert(Sign sign) {
+    public int insert(Sign sign) {
+        int count=0;
         //1.获取db对象
         db=helper.getWritableDatabase();
         String sql="insert into t_sign values(?,?)";
         //2.执行sql
-        db.execSQL(sql,new Object[]{
-                sign.getNumber(),
-                sign.getPassword()
-        });
-
+        try {
+            db.execSQL(sql,new Object[]{
+                            sign.getNumber(),
+                            sign.getPassword(),
+                    }
+            );
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return count;
 
     }
 
