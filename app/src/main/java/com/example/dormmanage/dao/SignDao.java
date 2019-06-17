@@ -9,7 +9,7 @@ public interface SignDao {
     Sign select(String number);
 
     //注册
-    int insert(Sign sign);
+    void insert(Sign sign);
     //
     void update(Sign sign);
     void delete(String number );

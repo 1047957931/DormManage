@@ -8,8 +8,8 @@ public class DBUtil extends SQLiteOpenHelper {
 
     private final String TBL_sign = "CREATE TABLE IF NOT EXISTS t_sign(" +
             " id integer  PRIMARY KEY AUTOINCREMENT," +
-            " number integer NOT NULL ," +
-            " passward varchar(8) NOT NULL )";
+            " number varchar(20) NOT NULL ," +
+            " password varchar(8) NOT NULL )";
 
     public DBUtil( Context context,  int version) {
         super(context, "demo.db",null, version);

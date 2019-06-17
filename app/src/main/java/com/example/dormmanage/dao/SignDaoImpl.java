@@ -71,11 +71,11 @@ public class SignDaoImpl implements SignDao{
     }
 
     @Override
-    public int insert(Sign sign) {
+    public void insert(Sign sign) {
         int count=0;
         //1.获取db对象
         db=helper.getWritableDatabase();
-        String sql="insert into t_sign values(?,?)";
+        String sql="insert into t_sign values(null, ?,?)";
         //2.执行sql
         try {
             db.execSQL(sql,new Object[]{
@@ -86,7 +86,6 @@ public class SignDaoImpl implements SignDao{
         }catch (Exception e){
             e.printStackTrace();
         }
-        return count;
 
     }
 

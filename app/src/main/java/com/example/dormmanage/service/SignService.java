@@ -22,11 +22,11 @@ public class SignService {
 //2.完成注册功能
 
     public boolean register(Sign sign) {
-        int count = 0;
         Sign s=dao.select(sign.getNumber());
         if (s==null){
-            count=dao.insert(sign);
+            dao.insert(sign);
+            return true;
         }
-        return count>0;
+        return false;
     }
 }
