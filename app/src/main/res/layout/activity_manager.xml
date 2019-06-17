@@ -22,14 +22,14 @@
             android:id="@+id/btn_function2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="功能"
+            android:text="查询"
             android:checked="true"
             android:layout_weight="1"/>
         <RadioButton
             android:id="@+id/btn_set2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="设置"
+            android:text="管理"
             android:layout_weight="1"/>
     </RadioGroup>
 
