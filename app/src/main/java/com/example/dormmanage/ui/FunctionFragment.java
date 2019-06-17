@@ -26,7 +26,7 @@ public class FunctionFragment extends Fragment {
     }
     private static final String ARG_PARAM1 = "param1";
     private String mParam1;
-    private ListView lv2;
+    private ListView lv1;
     private View view;
     public static FunctionFragment newInstance(String param1) {
         FunctionFragment fragment=new FunctionFragment();
@@ -47,20 +47,23 @@ public class FunctionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("个人中心");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("功能");
         // Inflate the layout for this fragment
+        if (view == null){
+            view = inflater.inflate(R.layout.fragment_function,container,false);
+        }
         //0.获取数据
         initData();
         //1.初始化控件
-        lv2 = view.findViewById(R.id.lv_function);
+        lv1 = view.findViewById(R.id.lv_function);
         //2.创建Adapter
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),//上下文
                 android.R.layout.simple_list_item_1,//布局
                 datas);//数据
         //3.给ListView设置Adatper
-        lv2.setAdapter(adapter);
+        lv1.setAdapter(adapter);
         //4.给Item设置监听事件
-        lv2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
                 String data = (String) parent.getItemAtPosition(position);
@@ -77,7 +80,7 @@ public class FunctionFragment extends Fragment {
                 }
             }
         });
-        lv2.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        lv1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long l) {
                 datas.remove(parent.getItemAtPosition(position));

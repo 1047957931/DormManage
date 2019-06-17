@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     private void initFragment() {
         fragments=new SparseArray<>();
-        fragments.put(R.id.btn_function,FunctionFragment.newInstance(""));
-        fragments.put(R.id.btn_set,SetFragment.newInstance());
+        fragments.put(R.id.btn_function,FunctionFragment.newInstance("???"));
+        fragments.put(R.id.btn_set,SetFragment.newInstance("???"));
         replaceFragment(fragments.get(R.id.btn_function));
     }
 
