@@ -47,7 +47,7 @@ public class Function2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("设置");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("查询");
         // Inflate the layout for this fragment
         if (view == null){
             view = inflater.inflate(R.layout.fragment_function2,container,false);
