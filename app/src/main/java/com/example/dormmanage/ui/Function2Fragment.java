@@ -47,7 +47,7 @@ public class Function2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("设置");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("查询");
         // Inflate the layout for this fragment
         if (view == null){
             view = inflater.inflate(R.layout.fragment_function2,container,false);
@@ -78,16 +78,6 @@ public class Function2Fragment extends Fragment {
                     intent.putExtra("title","来访登记");
                     startActivity(intent);
                 }
-                if ("楼层管理".equals(data)){
-                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
-                    intent.putExtra("title","楼层管理");
-                    startActivity(intent);
-                }
-                if ("宿舍管理".equals(data)){
-                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
-                    intent.putExtra("title","宿舍管理");
-                    startActivity(intent);
-                }
             }
         });
         lv2.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -106,7 +96,5 @@ public class Function2Fragment extends Fragment {
         datas=new ArrayList<>();
         datas.add("信息查询");
         datas.add("来访登记");
-        datas.add("楼层管理");
-        datas.add("宿舍管理");
     }
 }

@@ -47,7 +47,7 @@ public class Set2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("设置");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("管理");
         // Inflate the layout for this fragment
         if (view == null){
             view = inflater.inflate(R.layout.fragment_set2,container,false);
@@ -68,9 +68,14 @@ public class Set2Fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
                 String data = (String) parent.getItemAtPosition(position);
                 Toast.makeText(parent.getContext(),data,Toast.LENGTH_LONG).show();
-                if ("修改个人信息".equals(data)){
+                if ("楼层管理".equals(data)){
                     Intent intent=new Intent(getActivity(),ManagerActivity.class);
-                    intent.putExtra("title","修改个人信息");
+                    intent.putExtra("title","楼层管理");
+                    startActivity(intent);
+                }
+                if ("宿舍管理".equals(data)){
+                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
+                    intent.putExtra("title","宿舍管理");
                     startActivity(intent);
                 }
             }
@@ -89,6 +94,7 @@ public class Set2Fragment extends Fragment {
     //private String[]datas={""};
     private void initData() {
         datas=new ArrayList<>();
-        datas.add("修改个人信息");
+        datas.add("楼层管理");
+        datas.add("宿舍管理");
     }
 }
