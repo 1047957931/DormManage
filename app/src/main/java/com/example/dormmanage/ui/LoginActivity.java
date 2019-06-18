@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String usermame = signnumber.getText().toString().trim();
         String password = signpassword.getText().toString();
         //比较用户名的密码是否正确，然后给出提示
-        if (usermame.equals("CYS") && password.equals("123456")) {
+        if (usermame.equals("") && password.equals("")) {
             Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(LoginActivity.this,ManagerActivity.class);//跳转页面
             intent.putExtra("username",usermame);//将要传递的值附加到intent对象
