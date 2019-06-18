@@ -75,14 +75,7 @@ public class SetFragment extends Fragment {
                 }
             }
         });
-        lv1.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long l) {
-                datas.remove(parent.getItemAtPosition(position));
-                adapter.notifyDataSetChanged();
-                return true;
-            }
-        });
+
         return view;
     }
     private List<String> datas;

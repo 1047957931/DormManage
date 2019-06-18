@@ -74,18 +74,10 @@ public class Function2Fragment extends Fragment {
                     startActivity(intent);
                 }
                 if ("来访登记".equals(data)){
-                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
+                    Intent intent=new Intent(getActivity(),Visit1Activity.class);
                     intent.putExtra("title","来访登记");
                     startActivity(intent);
                 }
-            }
-        });
-        lv2.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long l) {
-                datas.remove(parent.getItemAtPosition(position));
-                adapter.notifyDataSetChanged();
-                return true;
             }
         });
         return view;

@@ -74,18 +74,10 @@ public class Set2Fragment extends Fragment {
                     startActivity(intent);
                 }
                 if ("宿舍管理".equals(data)){
-                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
+                    Intent intent=new Intent(getActivity(),RoomManager1Activity.class);
                     intent.putExtra("title","宿舍管理");
                     startActivity(intent);
                 }
-            }
-        });
-        lv2.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long l) {
-                datas.remove(parent.getItemAtPosition(position));
-                adapter.notifyDataSetChanged();
-                return true;
             }
         });
         return view;
