@@ -68,9 +68,9 @@ public class SetFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
                 String data = (String) parent.getItemAtPosition(position);
                 Toast.makeText(parent.getContext(),data,Toast.LENGTH_LONG).show();
-                if ("修改个人信息".equals(data)){
+                if ("修改密码".equals(data)){
                     Intent intent=new Intent(getActivity(),MainActivity.class);
-                    intent.putExtra("title","修改个人信息");
+                    intent.putExtra("title","修改密码");
                     startActivity(intent);
                 }
             }

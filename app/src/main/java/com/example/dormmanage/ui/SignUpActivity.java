@@ -45,7 +45,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         // 1. 比较两次输入的密码是否一致
         String pwd = etpassword.getText().toString();
         String pwd1 = etpassword1.getText().toString();
-        if(pwd.equals(pwd1)) {
+        if(!pwd.equals("")&&pwd.equals(pwd1)) {
             // 2. 获取输入的信息
             Sign sign = new Sign();
             sign.setNumber(etusername.getText().toString());
@@ -63,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(SignUpActivity.this, "注册失败", Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(SignUpActivity.this, "两次密码不一致", Toast.LENGTH_LONG).show();
+            Toast.makeText(SignUpActivity.this, "两次密码不一致或者输入为空", Toast.LENGTH_LONG).show();
         }
     }
 }
