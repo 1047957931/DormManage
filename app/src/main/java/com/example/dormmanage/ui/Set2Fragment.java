@@ -68,9 +68,9 @@ public class Set2Fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
                 String data = (String) parent.getItemAtPosition(position);
                 Toast.makeText(parent.getContext(),data,Toast.LENGTH_LONG).show();
-                if ("楼层管理".equals(data)){
-                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
-                    intent.putExtra("title","楼层管理");
+                if ("楼层信息".equals(data)){
+                    Intent intent=new Intent(getActivity(),FloorManagerActivity.class);
+                    intent.putExtra("title","楼层信息");
                     startActivity(intent);
                 }
                 if ("宿舍管理".equals(data)){
@@ -86,7 +86,7 @@ public class Set2Fragment extends Fragment {
     //private String[]datas={""};
     private void initData() {
         datas=new ArrayList<>();
-        datas.add("楼层管理");
+        datas.add("楼层信息");
         datas.add("宿舍管理");
     }
 }

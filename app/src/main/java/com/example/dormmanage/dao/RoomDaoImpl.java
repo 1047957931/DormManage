@@ -23,7 +23,7 @@ public class RoomDaoImpl implements RoomDao {
 
     public void insert(Room room) {
         db = dbHelper.getWritableDatabase();
-        String sql = "insert into t_room values(null,?,?,?,?,?,?)";
+        String sql = "insert into t_room values(null,?,?,?,?)";
         db.execSQL(sql, new Object[]{
                 room.getRoomName(),
                 room.getExpectNumber(),

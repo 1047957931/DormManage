@@ -14,11 +14,9 @@ public class DBUtil extends SQLiteOpenHelper {
     public final String TBL_room = "create table if not exists t_room(" +
             "id integer primary key autoincrement, " +
             "room_name varchar(20), " +
-            "room_sex varchar(10), " +
             "expect_number integer, " +
             "real_number integer, " +
-            "cost integer, " +
-            "remark varchar(200))";
+            "cost integer)";
 
 
     public DBUtil( Context context) {

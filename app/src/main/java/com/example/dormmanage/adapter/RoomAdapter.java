@@ -1,5 +1,6 @@
 package com.example.dormmanage.adapter;
 
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class RoomAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if(convertView == null) {
+            convertView= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_room,parent,false);
             holder = new ViewHolder();
 
             holder.tvName = convertView.findViewById(R.id.room_name);
@@ -50,7 +52,7 @@ public class RoomAdapter extends BaseAdapter {
         }
 
         Room room = rooms.get(position);
-        holder.tvName.setText(room.getRoomName());
+        holder.tvName.setText(String.valueOf(room.getRoomName()));
         holder.tvExpectNumber.setText(String.valueOf(room.getExpectNumber()));
         holder.tvRealNumber.setText(String.valueOf(room.getRealNumber()));
         holder.tvCost.setText(String.valueOf(room.getCost()));
