@@ -69,7 +69,7 @@ public class Function2Fragment extends Fragment {
                 String data = (String) parent.getItemAtPosition(position);
                 Toast.makeText(parent.getContext(),data,Toast.LENGTH_LONG).show();
                 if ("信息查询".equals(data)){
-                    Intent intent=new Intent(getActivity(),ManagerActivity.class);
+                    Intent intent=new Intent(getActivity(),ISActivity.class);
                     intent.putExtra("title","信息查询");
                     startActivity(intent);
                 }
