@@ -18,6 +18,16 @@ public class DBUtil extends SQLiteOpenHelper {
             "real_number integer, " +
             "cost integer)";
 
+    public final String TBL_student = "create table if not exists t_student("+
+            "id integer PRIMARY KEY AUTOINCREMENT,"+
+            "name varchar(8) NOT NULL,"+
+            "sex varchar(8) NOT NULL,"+
+            "number varchar(8) NOT NULL,"+
+            "class varchar(8) NOT NULL,"+
+            "department varchar(8) NOT NULL,"+
+            "major varchar(8) NOT NULL,"+
+            "tel integer NOT NULL,"+
+            "sos integer NOT NULL)";
 
     public DBUtil( Context context) {
         super(context, "demo.db",null, 2);
@@ -28,6 +38,7 @@ public class DBUtil extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TBL_sign);
         db.execSQL(TBL_room);
+        db.execSQL(TBL_student);
     }
     //当app发现有demo，db时，而且version有变化时会自动调用onUpgrade更新数据库表
 

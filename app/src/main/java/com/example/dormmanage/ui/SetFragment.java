@@ -47,41 +47,10 @@ public class SetFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("设置");
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("楼层信息");
         // Inflate the layout for this fragment
-        if (view == null){
-            view = inflater.inflate(R.layout.fragment_set,container,false);
-        }
-        //0.获取数据
-        initData();
-        //1.初始化控件
-        lv1 = view.findViewById(R.id.lv_set);
-        //2.创建Adapter
-        final ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),//上下文
-                android.R.layout.simple_list_item_1,//布局
-                datas);//数据
-        //3.给ListView设置Adatper
-        lv1.setAdapter(adapter);
-        //4.给Item设置监听事件
-        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
-                String data = (String) parent.getItemAtPosition(position);
-                Toast.makeText(parent.getContext(),data,Toast.LENGTH_LONG).show();
-                if ("修改密码".equals(data)){
-                    Intent intent=new Intent(getActivity(),MainActivity.class);
-                    intent.putExtra("title","修改密码");
-                    startActivity(intent);
-                }
-            }
-        });
 
         return view;
     }
-    private List<String> datas;
-    //private String[]datas={""};
-    private void initData() {
-        datas=new ArrayList<>();
-        datas.add("修改个人信息");
-    }
+
 }

@@ -22,15 +22,17 @@
             android:id="@+id/btn_function"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="功能"
+            android:text="个人信息"
             android:checked="true"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            style="@style/tab_menu_item"/>
         <RadioButton
             android:id="@+id/btn_set"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="设置"
-            android:layout_weight="1"/>
+            android:text="楼层信息"
+            android:layout_weight="1"
+            style="@style/tab_menu_item"/>
     </RadioGroup>
 
 </LinearLayout>
