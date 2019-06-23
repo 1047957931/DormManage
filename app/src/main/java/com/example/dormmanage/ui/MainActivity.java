@@ -6,12 +6,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseArray;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.dormmanage.R;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class MainActivity extends AppCompatActivity
+        implements RadioGroup.OnCheckedChangeListener{
     private RadioGroup group;
     private SparseArray<Fragment>fragments;
 
@@ -53,4 +56,22 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         //4.事务提交
         ft.commit();
     }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.menu_change:
+//                Toast.makeText(MainActivity.this,"更换账号",Toast.LENGTH_LONG).show();
+//                break;
+//            case R.id.menu_exit:
+//                Toast.makeText(MainActivity.this,"退出应用",Toast.LENGTH_LONG).show();
+//                break;
+//                default:
+//                    super.onOptionsItemSelected(item);
+//                    break;
+//
+//        }
+//        return true;
+//
+//    }
 }

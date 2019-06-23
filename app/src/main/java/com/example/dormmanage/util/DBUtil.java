@@ -46,6 +46,7 @@ public class DBUtil extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists t_sign");
         db.execSQL("drop table if exists t_room");
+        db.execSQL("drop table if exists t_student");
         onCreate(db);
     }
 }
