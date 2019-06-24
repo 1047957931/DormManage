@@ -9,4 +9,5 @@ public interface RoomService {
     public void insert(Room room);
     public void modifyRealNumber(Room room);
     public void delete(String roomName);
+    public Room select(String roomname);
 }
