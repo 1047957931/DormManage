@@ -1,23 +1,28 @@
 package com.example.dormmanage.ui;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dormmanage.R;
 import com.example.dormmanage.model.Sign;
 import com.example.dormmanage.service.SignService;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText signnumber;
     private EditText signpassword;
-    private Button signup;
-    private Button studentlogin;
-    private Button managerlogin;
+    private TextView signup;
+    private ImageButton studentlogin;
+    private ImageButton managerlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +49,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 login();
                 break;
             case R.id.btn_signup:
-               Intent intent=new Intent(LoginActivity.this,SignUpActivity.class);
+                Intent intent=new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
                 break;
             case R.id.btn_manager_login:
-               login1();
+                login1();
                 break;
         }
     }
