@@ -23,9 +23,8 @@ public class DBUtil extends SQLiteOpenHelper {
             "name varchar(8) NOT NULL,"+
             "sex varchar(8) NOT NULL,"+
             "number varchar(8) NOT NULL,"+
-            "class varchar(8) NOT NULL,"+
             "department varchar(8) NOT NULL,"+
-            "major varchar(8) NOT NULL,"+
+            "class varchar(8) NOT NULL,"+
             "tel integer NOT NULL,"+
             "sos integer NOT NULL)";
 
