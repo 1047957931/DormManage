@@ -5,9 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.dormmanage.model.Sign;
-import com.example.dormmanage.util.DBUtil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SignDaoImpl implements SignDao{

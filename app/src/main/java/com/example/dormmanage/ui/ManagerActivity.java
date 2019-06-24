@@ -31,7 +31,7 @@ public class ManagerActivity extends AppCompatActivity implements RadioGroup.OnC
     private void initFragment() {
         fragments=new SparseArray<>();
         fragments.put(R.id.btn_function2,Function2Fragment.newInstance("a"));
-        fragments.put(R.id.btn_set2,Set2Fragment.newInstance("a"));
+        fragments.put(R.id.btn_set2, Set2Fragment.newInstance("a"));
         replaceFragment(fragments.get(R.id.btn_function2));
     }
 

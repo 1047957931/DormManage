@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.dormmanage.model.Room;
-import com.example.dormmanage.util.DBUtil;
 
 public class RoomDaoImpl implements RoomDao {
     private DBUtil dbHelper;

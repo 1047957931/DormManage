@@ -1,8 +1,8 @@
 package com.example.dormmanage.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,9 +11,6 @@ import android.widget.Toast;
 import com.example.dormmanage.R;
 import com.example.dormmanage.model.Sign;
 import com.example.dormmanage.service.SignService;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText signnumber;

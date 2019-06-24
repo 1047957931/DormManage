@@ -1,23 +1,14 @@
 package com.example.dormmanage.ui;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.dormmanage.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class SetFragment extends Fragment {
     public SetFragment() {
@@ -49,8 +40,12 @@ public class SetFragment extends Fragment {
                              Bundle savedInstanceState) {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("楼层信息");
         // Inflate the layout for this fragment
+        if (view == null){
+            view = inflater.inflate(R.layout.fragment_set,container,false);
+        }
 
         return view;
     }
+
 
 }

@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,9 +15,9 @@ import android.widget.ListView;
 
 import com.example.dormmanage.R;
 import com.example.dormmanage.adapter.RoomAdapter;
+import com.example.dormmanage.model.Room;
 import com.example.dormmanage.service.RoomService;
 import com.example.dormmanage.service.RoomServiceImpl;
-import com.example.dormmanage.model.Room;
 
 import java.util.ArrayList;
 import java.util.List;

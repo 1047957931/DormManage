@@ -1,8 +1,6 @@
 package com.example.dormmanage.ui;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -69,12 +67,12 @@ public class Function2Fragment extends Fragment {
                 String data = (String) parent.getItemAtPosition(position);
                 Toast.makeText(parent.getContext(),data,Toast.LENGTH_LONG).show();
                 if ("信息查询".equals(data)){
-                    Intent intent=new Intent(getActivity(),ISActivity.class);
+                    Intent intent=new Intent(getActivity(), ManagerActivity.class);
                     intent.putExtra("title","信息查询");
                     startActivity(intent);
                 }
                 if ("来访登记".equals(data)){
-                    Intent intent=new Intent(getActivity(),Visit1Activity.class);
+                    Intent intent=new Intent(getActivity(), Visit1Activity.class);
                     intent.putExtra("title","来访登记");
                     startActivity(intent);
                 }

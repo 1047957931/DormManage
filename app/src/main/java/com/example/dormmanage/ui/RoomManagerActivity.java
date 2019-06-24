@@ -2,16 +2,16 @@ package com.example.dormmanage.ui;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.dormmanage.R;
+import com.example.dormmanage.model.Room;
 import com.example.dormmanage.service.RoomService;
 import com.example.dormmanage.service.RoomServiceImpl;
-import com.example.dormmanage.model.Room;
 
 public class RoomManagerActivity extends AppCompatActivity implements View.OnClickListener {
 
