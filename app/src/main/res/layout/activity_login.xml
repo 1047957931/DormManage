@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.LoginActivity"
+    android:background="#ffffff">
 
 
     <ImageView
-        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/school"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/school" />
     <TextView
         android:gravity="center"
         android:textColor="#000"
@@ -23,43 +24,59 @@
         android:textSize="24sp" />
 
     <EditText
-        android:background="@drawable/bg_1"
+        android:background="#E6E6E6"
         android:id="@+id/sign_number"
         android:textColor="#000"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="50dp"
         android:hint="请输入用户名:" />
 
     <EditText
-        android:layout_marginTop="10dp"
-        android:background="@drawable/bg_1"
+        android:layout_marginTop="20dp"
+        android:background="#E6E6E6"
         android:id="@+id/sign_password"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
         android:layout_height="50dp"
         android:inputType="numberPassword"
         android:hint="请输入密码:" />
 
-    <Button
-        android:id="@+id/btn_student_login"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="学生登录"
-        android:textSize="20sp" />
-    <Button
-        android:id="@+id/btn_manager_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="管理登录"
-        android:textSize="20sp" />
-    <Button
+        android:orientation="horizontal">
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        <ImageButton
+            android:id="@+id/btn_student_login"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="180dp"
+            android:src="@drawable/student" />
+
+        <ImageButton
+            android:id="@+id/btn_manager_login"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/manger" />
+    </LinearLayout>
+    <TextView
         android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="#ffffff"
+        android:layout_marginTop="120dp"
         android:text="注册"
-        android:textSize="20sp" />
-
+        android:textSize="20sp"
+        android:layout_marginRight="120dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录即代表服务协议"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="right"
+        android:textSize="20sp"/>
 </LinearLayout>
