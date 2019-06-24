@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <EditText
+        android:id="@+id/et_srarch1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入学员姓名"
+        android:inputType="textPersonName" />
+    <Button
+        android:id="@+id/bn_sure_search1"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"         />
+    <Button
+        android:id="@+id/bn_return1"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="返回"         />
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/su1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宿舍号"/>
+        <TextView
+            android:id="@+id/su2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应住人数"/>
+        <TextView
+            android:id="@+id/su3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实住人数"/>
+        <TextView
+            android:id="@+id/su4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学费"/>
+
+    </LinearLayout>
+</LinearLayout>
